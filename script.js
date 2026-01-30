@@ -108,3 +108,5 @@ addToCartButtons.forEach(btn => {
         window.location.href = "product.html";
     });
 });
+
+let a = 33;
