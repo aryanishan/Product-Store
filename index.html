@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sports Gear Pro - Premium Sports Equipment</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="search-bar">
-      <h1>Product Store</h1>
+      <h1>🏆 Sports Gear Pro</h1>
 
       <div class="search-box">
-        <input type="text" placeholder="Search for products..." />
-        <button type="button">Search</button>
+        <input type="text" placeholder="Search products..." id="searchInput" />
+        <button type="button" id="searchBtn">Search</button>
 
-        <!-- MOVE IT HERE -->
+        <!-- Search History Dropdown -->
         <div class="search-history" id="searchHistory"></div>
       </div>
       <div class="view">
@@ -24,132 +24,16 @@
       </div>
     </div>
 
-    <div class="products">
-      <div class="product-card" data-name="Cricket stumps">
-        <img src="stump.jpg" alt="Cricket stumps" />
-        <h3>Cricket Stumps</h3>
-        <p>₹799</p>
-        <button
-          type="button"
-          class="add-to-cart"
-          data-name="Cricket Stumps"
-          data-price="799"
-          data-image="stump.jpg"
-        >
-          Add to Cart
-        </button>
-      </div>
+    <div class="products" id="productsContainer">
+      <!-- Products will be loaded here by JavaScript -->
+    </div>
 
-      <div class="product-card" data-name="Wicket keeping gloves">
-        <img
-          src="sports-wicket-keeping-gloves-073.jpg"
-          alt="Wicket keeping gloves"
-        />
-        <h3>Wicket Keeping Gloves</h3>
-        <p>₹1,299</p>
-        <button
-          type="button"
-          class="add-to-cart"
-          data-name="Wicket keeping gloves"
-          data-price="1299"
-          data-image="sports-wicket-keeping-gloves-073.jpg"
-        >
-          Add to Cart
-        </button>
-      </div>
-
-      <div class="product-card" data-name="Badminton racket">
-        <img src="yonex-badminton-racket.jpg" alt="Badminton racket" />
-        <h3>Yonex Racket</h3>
-        <p>₹2,499</p>
-        <button
-          type="button"
-          class="add-to-cart"
-          data-name="Badmintono racket"
-          data-price="2499"
-          data-image="yonex-badminton-racket.jpg"
-        >
-          Add to Cart
-        </button>
-      </div>
-
-      <div class="product-card" data-name="Football">
-        <img src="fifa-mini-size-2-ball.jpg" alt="Football" />
-        <h3>Football</h3>
-        <p>₹999</p>
-        <button
-          type="button"
-          class="add-to-cart"
-          data-name="Football"
-          data-price="999"
-          data-image="fifa-mini-size-2-ball.jpg"
-        >
-          Add to Cart
-        </button>
-      </div>
-
-      <div class="product-card" data-name="Cricket Ball">
-        <img
-          src="360_F_1610220961_P7Ul9J4h8ltJpkA242NOHuoabe270G5I.jpg"
-          alt="Cricket Ball"
-        />
-        <h3>Cricket Ball</h3>
-        <p>₹199</p>
-        <button
-          type="button"
-          class="add-to-cart"
-          data-name="Cricket Ball"
-          data-price="199"
-          data-image="360_F_1610220961_P7Ul9J4h8ltJpkA242NOHuoabe270G5I.jpg"
-        >
-          Add to Cart
-        </button>
-      </div>
-
-      <div class="product-card" data-name="Cricket Bat">
-        <img src="317VTY6RngL.jpg" alt="Cricket Bat" />
-        <h3>Cricket Bat</h3>
-        <p>₹1,899</p>
-        <button
-          type="button"
-          class="add-to-cart"
-          data-name="Cricket Bat"
-          data-price="1899"
-          data-image="317VTY6RngL.jpg"
-        >
-          Add to Cart
-        </button>
-      </div>
-
-      <div class="product-card" data-name="Hockey Stick">
-        <img src="hockey-stick-1543322442-4422079.jpeg" alt="Hockey Stick" />
-        <h3>Hockey Stick</h3>
-        <p>₹699</p>
-        <button
-          type="button"
-          class="add-to-cart"
-          data-name="Hockey Stick"
-          data-price="699"
-          data-image="hockey-stick-1543322442-4422079.jpg"
-        >
-          Add to Cart
-        </button>
-      </div>
-
-      <div class="product-card" data-name="Cricket Helmet">
-        <img src="DSC_1350-copy-1-scaled.webp" alt="Cricket Helmet" />
-        <h3>Cricket Helmet</h3>
-        <p>₹699</p>
-        <button
-          type="button"
-          class="add-to-cart"
-          data-name="Cricket Helmet"
-          data-price="699"
-          data-image="DSC_1350-copy-1-scaled.jpg"
-        >
-          Add to Cart
-        </button>
-      </div>
+    <!-- Pagination -->
+    <div class="pagination" id="pagination">
+      <button id="prevBtn" disabled>Previous</button>
+      <!-- Page numbers will be added here -->
+      <button id="nextBtn">Next</button>
+      <span class="pagination-info" id="pageInfo">Page 1 of 3</span>
     </div>
 
     <script src="script.js"></script>
