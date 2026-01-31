@@ -2,13 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Product Details</title>
+    <title>Product Details - Sports Gear Pro</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .back-button {
+            margin-bottom: 20px;
+        }
+        
+        .back-button button {
+            padding: 10px 20px;
+            background: #5c6bc0;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .back-button button:hover {
+            background: #3949ab;
+        }
+    </style>
 </head>
 <body>
 
 <div class="search-bar">
-    <h1>Product Details</h1>
+    <h1>📦 Product Details</h1>
+    <div class="back-button">
+        <button onclick="window.history.back()">← Back to Store</button>
+    </div>
 </div>
 
 <div class="product-details">
@@ -18,24 +40,46 @@
 
     <div class="details">
         <h2 id="productName"></h2>
-
-        <p class="price">₹<span id="productPrice"></span></p>
+        
+        <div class="price-rating">
+            <p class="price">₹<span id="productPrice"></span></p>
+            <div class="rating">
+                ★★★★★ <span>4.8 (120 reviews)</span>
+            </div>
+        </div>
 
         <p id="productDesc"></p>
 
-        <ul class="product-info">
-            <li><strong>Brand:</strong> Yonex</li>
-            <li><strong>Category:</strong> Sports Equipment</li>
-            <li><strong>Availability:</strong> In Stock</li>
-            <li><strong>Delivery:</strong> 3–5 working days</li>
-        </ul>
+        <div class="features">
+            <h3>Key Features:</h3>
+            <ul class="product-info">
+                <li>✅ Premium Quality Materials</li>
+                <li>✅ Professional Grade</li>
+                <li>✅ Durable Construction</li>
+                <li>✅ Official Size & Weight</li>
+                <li>✅ 1 Year Warranty</li>
+            </ul>
+        </div>
 
-        <button class="buy-btn" style="color: white;">Buy Now</button>
-        <p class="secure">✔ Secure payment | ✔ Easy returns</p>
+        <div class="specs">
+            <h3>Specifications:</h3>
+            <ul class="product-info">
+                <li><strong>Brand:</strong> <span id="productBrand">Sports Gear Pro</span></li>
+                <li><strong>Category:</strong> <span id="productCategory">Sports Equipment</span></li>
+                <li><strong>Availability:</strong> <span style="color: #4CAF50;">In Stock</span></li>
+                <li><strong>Delivery:</strong> 2–4 business days</li>
+                <li><strong>Warranty:</strong> 12 months</li>
+            </ul>
+        </div>
 
+        <div class="action-buttons">
+            <button class="buy-btn" onclick="alert('Proceeding to checkout...')">🛒 Add to Cart</button>
+            <button class="buy-btn" style="background: #4CAF50; margin-left: 10px;" onclick="alert('Redirecting to payment...')">💳 Buy Now</button>
+        </div>
+        
+        <p class="secure">🔒 Secure payment | 📦 Free shipping on orders above ₹2000 | 🔄 30-day return policy</p>
     </div>
 </div>
-
 
 <script src="product.js"></script>
 </body>
